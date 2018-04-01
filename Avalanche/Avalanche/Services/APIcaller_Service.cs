@@ -7,8 +7,8 @@ using RestSharp;
 using System.Collections;
 using System.Text;
 using Newtonsoft.Json;
-using ArkNet.Model.Transactions;
-using ArkNet.Controller;
+//using ArkNet.Model.Transactions;
+//using ArkNet.Controller;
 
 namespace Avalanche.Services
 {
@@ -296,37 +296,39 @@ namespace Avalanche.Services
 
 
 
-            public ArkTransactionList GetRequestArk()
-        {
-            //var account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), 
-            //    ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
-            //var transaction = new ArkTransactionRequest();
-            //transaction.OrderBy = "timestamp:desc";
-            //transaction.RecipientId = "D8wohrKtnziDS6AGNKD7fWnx4kxF4e6bGx";
-            //transaction.SenderId = "D8wohrKtnziDS6AGNKD7fWnx4kxF4e6bGx";
-            //transaction.Offset = 0;
-            //transaction.Limit = 100000;
-            //if (TransactionService == null)
-              //  return null;
+        //    public ArkTransactionList GetRequestArk()
+        //{
+        //    //var account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), 
+        //    //    ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
 
-            //var result = TransactionService.GetTransactions(transaction);
-            var accCtnrl = new AccountController(_passPhrase);
-            var result = accCtnrl.GetTransactions();
+        //    //var transaction = new ArkTransactionRequest();
+        //    //transaction.OrderBy = "timestamp:desc";
+        //    //transaction.RecipientId = "D8wohrKtnziDS6AGNKD7fWnx4kxF4e6bGx";
+        //    //transaction.SenderId = "D8wohrKtnziDS6AGNKD7fWnx4kxF4e6bGx";
+        //    //transaction.Offset = 0;
+        //    //transaction.Limit = 100000;
+        //    //if (TransactionService == null)
+        //      //  return null;
 
-            return result;
-        }
+        //    //var result = TransactionService.GetTransactions(transaction);
+        //    var accCtnrl = new AccountController(_passPhrase);
+        //    var result = accCtnrl.GetTransactions();
+
+
+        //    return result;
+        //}
 
         // TODO the satoshi amount, recepient address and passphrase are currently only used for the test account, we will
         // need to have a unique one per user, coming from the database
-        public ArkTransactionPostResponse PostRequestArk(string message)
-        {
-            var accCtnrl = new AccountController("ability cloud wisdom tortoise use rocket draw napkin cute split keep strike");
-            var result = accCtnrl.SendArk(1, _address, message);
+        //public ArkTransactionPostResponse PostRequestArk(string message)
+        //{
+        //    var accCtnrl = new AccountController("ability cloud wisdom tortoise use rocket draw napkin cute split keep strike");
+        //    var result = accCtnrl.SendArk(1, _address, message);
 
 
-            return result;
+        //    return result;
 
 
-        }
+        //}
 }
 }

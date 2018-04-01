@@ -7,16 +7,12 @@
 
   <ItemGroup>
     <Compile Remove="ark-js\**" />
-    <Compile Remove="ark-net\ark-netTests\**" />
     <Compile Remove="Resources\**" />
     <Content Remove="ark-js\**" />
-    <Content Remove="ark-net\ark-netTests\**" />
     <Content Remove="Resources\**" />
     <EmbeddedResource Remove="ark-js\**" />
-    <EmbeddedResource Remove="ark-net\ark-netTests\**" />
     <EmbeddedResource Remove="Resources\**" />
     <None Remove="ark-js\**" />
-    <None Remove="ark-net\ark-netTests\**" />
     <None Remove="Resources\**" />
   </ItemGroup>
 

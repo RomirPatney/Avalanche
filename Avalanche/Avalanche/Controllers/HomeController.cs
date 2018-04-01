@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using Avalanche.Models;
 using Avalanche.Models.ModelViewDataTables;
 using Avalanche.Services;
-using ArkNet;
-using ArkNet.Utils.Enum;
+//using ArkNet;
+//using ArkNet.Utils.Enum;
 
 namespace Avalanche.Controllers
 {
     public class HomeController : Controller
     {
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index()
         {
-            await ArkNetApi.Instance.Start(NetworkType.DevNet);
-            var obj = new APIcaller_Service();
-            var x = obj.GetRequestArk();
-            var y = obj.PostRequestArk("12,55,23");
+            //await ArkNetApi.Instance.Start(NetworkType.DevNet);
+            //var obj = new APIcaller_Service();1
+            //var x = obj.GetRequestArk();
+            //var y = obj.PostRequestArk("12,55,23");
             return View();
         }
 
@@ -46,6 +46,8 @@ namespace Avalanche.Controllers
         {
             //model.Frequency;
             //model.ValueOption;
+
+            //ViewBag.Posts = APIcaller_Service.(context);
 
             return View();
         }
