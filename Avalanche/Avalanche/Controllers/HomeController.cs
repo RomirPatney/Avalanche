@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Avalanche.Models;
+using Avalanche.Models.ModelViewDataTables;
 
 namespace Avalanche.Controllers
 {
@@ -30,6 +31,14 @@ namespace Avalanche.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult DataLog(PullDataForm model)
+        {
+            //model.Frequency;
+            //model.ValueOption;
 
             return View();
         }

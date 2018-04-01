@@ -12,6 +12,7 @@ namespace Avalanche.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Log> Logs { get; set; }
+        public DbSet<Settings> Settings { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

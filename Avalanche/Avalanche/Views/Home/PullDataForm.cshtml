@@ -2,6 +2,33 @@
 @{
     ViewData["Title"] = "PullDataForm";
 }
+@using Avalanche.Models.ModelViewDataTables;
+@model PullDataForm;
 
-<h2>PullDataForm</h2>
+<br />
+<br />
+<br />
+<form asp-action="DataLog" method="get">
+    <div class="form-group">
+        <label asp-for="Frequency"></label>
+        <select asp-for="Frequency">
+            <option value="Seconds">Seconds</option>
+            <option value="Minutes">Minutes</option>
+            <option value="Hours">Hours</option>
+            <option value="Days">Days</option>
+        </select>
+        <span asp-validation-for="Frequency" class="text-danger"></span>
+    </div>
+    <div class="form-group" style="width:20%">
+        <input asp-for="NO_Frequency" class="form-control" />
+        <span asp-validation-for="NO_Frequency" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ValueOption"></label><br />
+        <input input asp-for="ValueOption" type="radio" name="type" value="Average" checked> Average<br>
+        <input input asp-for="ValueOption" type="radio" name="type" value="Instant"> Instant<br>
+        <span asp-validation-for="ValueOption" class="text-danger"></span>
+    </div>
 
+    <button type="submit" class="btn btn-default">Save!</button>
+</form>

@@ -22,7 +22,7 @@ namespace Avalanche.Services
         {
             var client = new RestClient(endnode);
             var request = new RestRequest(Method.POST);
-            request.AddHeader("Postman-Token", "cf2a0a17-df25-4585-9a57-cc6ec09eca52");
+            request.AddHeader("Postman-Token", "cf2a0a17-df25-4585-9a57-cc6ec09eca5 2");
             request.AddHeader("Cache-Control", "no-cache");
             request.AddParameter("undefined", post, ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
