@@ -22,11 +22,22 @@
             <div class="navbar-header">
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Avalanche</a>
             </div>
+            
+            
+            @*<div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li><a class="btn-secondary btn-default" style="border:hidden;text-decoration: none; padding:8px" asp-area="" asp-controller="Home" asp-action="Index">Home&#160;&#160;</a></li>
+                    <li><a class="btn-secondary btn-default" style="border:hidden;text-decoration: none; padding:8px" asp-area="" asp-controller="Home" asp-action="About">About&#160;&#160;</a></li>
+                    <li><a class="btn-secondary btn-default" style="border:hidden;text-decoration: none; padding:8px" asp-area="" asp-controller="Home" asp-action="Contact">Contact&#160;&#160;</a></li>
+                    <li><a class="btn-secondary btn-default" style="border:hidden;text-decoration: none; padding:8px" asp-area="" asp-controller="RoleAdmin" asp-action="Index">Admin&#160;&#160;</a></li>
+                    
+                </ul>
+            </div>*@
             <div class="navbar-collapse collapse">
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
-    </nav>
+</nav>
     <div class="container body-content">
         @RenderBody()
         <hr />

@@ -14,5 +14,19 @@ namespace Avalanche.Services
             List<Log> logs = context.Logs.ToList();
             return logs;
         }
+
+        public static void Savesettings(ApplicationDbContext context, string frequency, int no_freq, bool avgOinst)
+        {
+            while(context.Settings.Single() !=null)
+            {
+                Settings setting1 = context.Settings.Single();
+                context.Settings.Remove(setting1);
+            }
+            Settings setting = new Settings(frequency, no_freq, avgOinst);
+            context.Settings.Add(setting);
+
+            context.SaveChanges();
+            //context.Settings.Remove();
+        }
     }
 }
