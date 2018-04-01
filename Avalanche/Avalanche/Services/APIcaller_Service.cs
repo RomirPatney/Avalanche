@@ -24,6 +24,10 @@ namespace Avalanche.Services
         private string _passPhrase = "ability cloud wisdom tortoise use rocket draw napkin cute split keep strike";
         private string _address = "D8wohrKtnziDS6AGNKD7fWnx4kxF4e6bGx";
 
+
+        
+
+
         public void GetRequestPhoton(string endnode)
         {
             var client = new RestClient(endnode);
@@ -50,7 +54,7 @@ namespace Avalanche.Services
             //var account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), 
             //    ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
             var transaction = new ArkTransactionRequest();
-            var result = TransactionService.GetTransactions(transaction);
+            var result = TransactionService.GetTransactions(new ArkTransactionRequest());
             //var accCtnrl = new AccountController(_passPhrase);
             //var result = accCtnrl.GetTransactions();
 

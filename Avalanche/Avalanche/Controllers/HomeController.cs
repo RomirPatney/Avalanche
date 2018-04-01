@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Avalanche.Models;
 using Avalanche.Models.ModelViewDataTables;
+using Avalanche.Services;
+using ArkNet;
+using ArkNet.Utils.Enum;
 
 namespace Avalanche.Controllers
 {
@@ -13,6 +16,10 @@ namespace Avalanche.Controllers
     {
         public IActionResult Index()
         {
+            ArkNetApi.Instance.Start(NetworkType.DevNet);
+            APIcaller_Service obj = new APIcaller_Service();
+            var x = obj.GetRequestArk();
+            var y = obj.PostRequestArk("12,55,23");
             return View();
         }
 
