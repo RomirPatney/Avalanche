@@ -15,6 +15,11 @@ namespace Avalanche.Controllers
             return View();
         }
 
+        public IActionResult PullDataForm()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
