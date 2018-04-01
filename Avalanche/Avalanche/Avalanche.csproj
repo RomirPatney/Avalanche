@@ -5,8 +5,16 @@
     <UserSecretsId>aspnet-Avalanche-16C3FAD7-7E9F-454A-9BEC-3AECA0AC0907</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ark-net\**" />
+    <Content Remove="ark-net\**" />
+    <EmbeddedResource Remove="ark-net\**" />
+    <None Remove="ark-net\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
+    <PackageReference Include="ark.net" Version="0.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
@@ -16,6 +24,10 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

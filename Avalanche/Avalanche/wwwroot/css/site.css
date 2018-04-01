@@ -21,6 +21,15 @@
     width: 100%;
 }
 
+#mainIcon {
+    height: 50%;
+    width: 50%;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* QR code generator */
 #qrCode {
     margin: 15px;
