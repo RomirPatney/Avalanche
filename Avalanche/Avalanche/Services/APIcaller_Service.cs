@@ -38,7 +38,7 @@ namespace Avalanche.Services
         {
             var client = new RestClient(endnode);
             var request = new RestRequest(Method.POST);
-            request.AddHeader("Postman-Token", "cf2a0a17-df25-4585-9a57-cc6ec09eca5 2");
+            request.AddHeader("Postman-Token", "cf2a0a17-df25-4585-9a57-cc6ec09eca52");
             request.AddHeader("Cache-Control", "no-cache");
             request.AddParameter("undefined", post, ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
@@ -47,8 +47,8 @@ namespace Avalanche.Services
 
         public ArkTransactionList GetRequestArk()
         {
-            var account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), 
-                ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
+            //var account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), 
+            //    ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
             var transaction = new ArkTransactionRequest();
             var result = TransactionService.GetTransactions(transaction);
             //var accCtnrl = new AccountController(_passPhrase);
@@ -59,7 +59,7 @@ namespace Avalanche.Services
 
         // TODO the satoshi amount, recepient address and passphrase are currently only used for the test account, we will
         // need to have a unique one per user, coming from the database
-        public ArkTransactionPostResponse PostRequestArk(string address, string message)
+        public ArkTransactionPostResponse PostRequestArk(string message)
         {
             var accCtnrl = new AccountController(_passPhrase);
             var result = accCtnrl.SendArk(1, _address, message);
