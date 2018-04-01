@@ -6,29 +6,35 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ark-net\**" />
-    <Content Remove="ark-net\**" />
-    <EmbeddedResource Remove="ark-net\**" />
-    <None Remove="ark-net\**" />
+    <Compile Remove="ark-js\**" />
+    <Compile Remove="ark-net\ark-netTests\**" />
+    <Compile Remove="Resources\**" />
+    <Content Remove="ark-js\**" />
+    <Content Remove="ark-net\ark-netTests\**" />
+    <Content Remove="Resources\**" />
+    <EmbeddedResource Remove="ark-js\**" />
+    <EmbeddedResource Remove="ark-net\ark-netTests\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="ark-js\**" />
+    <None Remove="ark-net\ark-netTests\**" />
+    <None Remove="Resources\**" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="ark.net" Version="0.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
+    <PackageReference Include="NBitcoin" Version="4.0.0.65" />
     <PackageReference Include="RestSharp" Version="106.2.1" />
+    <PackageReference Include="SshNet.Security.Cryptography" Version="1.3.0" />
+    <PackageReference Include="Validation" Version="2.4.18" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

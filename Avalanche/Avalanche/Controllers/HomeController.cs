@@ -14,10 +14,10 @@ namespace Avalanche.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            ArkNetApi.Instance.Start(NetworkType.DevNet);
-            APIcaller_Service obj = new APIcaller_Service();
+            await ArkNetApi.Instance.Start(NetworkType.DevNet);
+            var obj = new APIcaller_Service();
             var x = obj.GetRequestArk();
             var y = obj.PostRequestArk("12,55,23");
             return View();
