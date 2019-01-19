@@ -1,5 +1,5 @@
 https://devpost.com/software/avalanche-s3nxoa
-### Avalanche
+# Avalanche
 ## Inspiration
 We wanted to build a gadget to be able to provide security and motivation to people of all ages while they take part in their activities.
 ##What it does
